@@ -14,6 +14,7 @@
     "@types/synaptic": "^1.0.3",
     "express": "^4.15.2",
     "jquery": "^3.3.1",
+    "pixi.js": "^4.8.1",
     "synaptic": "^1.1.4"
   },
   "devDependencies": {
