@@ -1,13 +1,18 @@
 import * as PIXI from 'pixi.js'
 
 export class Canvas {
-        private static _instance: Canvas;
+    public static width = 800;
+    public static height = 600;
+    
+    private static _instance: Canvas;
     
     private _c : PIXI.Application;
     
-    private constructor() {
-        this.c = new PIXI.Application(800, 600, {backgroundColor : 0x1099bb});
+    public constructor() {
+        this.c = new PIXI.Application(Canvas.width, Canvas.height, {backgroundColor : 0x1099bb});
+        Canvas._instance = this;
         document.body.appendChild(this._c.view);
+
 
         // Listen for animate update
         this._c.ticker.add(function(delta) {
